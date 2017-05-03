@@ -1,16 +1,14 @@
 <?php echo $this->doctype() ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Site E-Commerce</title>
-        <?php echo $this->headLink()->appendStylesheet('/css/global.css') ?>
     </head>
     <body>
-        <div id="header" style="background-color: #EEEEEE; height: 30px;">
-            <div id="header-logo" style="float: left">
+        <div>
+            <div >
                 <b>Site E-commerce</b>
             </div>
-            <div id="header-navigation" style="float: right">
+            <div >
                 <a href="<?php echo $this->url(array('controller'=>'product'), 'default', true) ?>">Produits</a>
                 <a href="<?php echo $this->url(array('controller'=>'cart'), 'default', true) ?>">Panier</a>
             </div>

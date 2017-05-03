@@ -1,29 +1,27 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: EVER
- * Date: 02/05/2017
- * Time: 15:33
- */
 class Application_Model_Product
 {
 
+
     private $id;
-    private $name;
+    private $productName;
     private $price;
     private $desc;
     private $quantity;
 
     /**
-     * Product constructor.
-     * @param string $name
-     * @param int $price
-     * @param string $desc
+     * Application_Model_Product constructor.
+     * @param $id
+     * @param $productName
+     * @param $price
+     * @param $desc
+     * @param $quantity
      */
-    public function __construct($name, $price, $desc, $quantity)
+    public function __construct($id, $productName, $price, $desc, $quantity)
     {
-        $this->name = $name;
+        $this->id = $id;
+        $this->productName = $productName;
         $this->price = $price;
         $this->desc = $desc;
         $this->quantity = $quantity;
@@ -46,39 +44,23 @@ class Application_Model_Product
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getName()
+    public function getProductName()
     {
-        return $this->name;
+        return $this->productName;
     }
 
     /**
-     * @param string $name
+     * @param mixed $productName
      */
-    public function setName($name)
+    public function setProductName($productName)
     {
-        $this->name = $name;
+        $this->productName = $productName;
     }
 
     /**
-     * @return int
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param int $price
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-    }
-
-    /**
-     * @return string
+     * @return mixed
      */
     public function getDesc()
     {
@@ -86,11 +68,27 @@ class Application_Model_Product
     }
 
     /**
-     * @param string $desc
+     * @param mixed $desc
      */
     public function setDesc($desc)
     {
         $this->desc = $desc;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param mixed $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
     }
 
     /**
@@ -108,9 +106,9 @@ class Application_Model_Product
     {
         $this->quantity = $quantity;
     }
+
+
+
+
 }
 
-class Application_Model_ProductMapper{
-
-    public function fetchAll(){}
-}

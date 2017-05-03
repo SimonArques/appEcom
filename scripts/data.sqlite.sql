@@ -1,12 +1,9 @@
-CREATE TABLE USER (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(50) NOT NULL,
-    login VARCHAR(50) NOT NULL,
-    password VARCHAR(50) NOT NULL,
-    isAdmin BOOLEAN DEFAULT FALSE
-
-);
-
-CREATE INDEX "id" ON "USER" ("id");
+INSERT INTO USER (name, login, password, isAdmin)
+VALUES ("Simon", "simonarques@gmail.com","password", 1);
 
 
+INSERT INTO PRODUCT (productName, price, desc, quantity)
+VALUES ("tableau", 130, "Un joli tableau", 1);
+
+INSERT INTO PRODUCT (productName, price, desc, quantity)
+VALUES ("Grille-Pain", 34, "Un grille-pain, pour griller le pain !", 4);

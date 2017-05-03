@@ -32,7 +32,7 @@ class Application_Model_User
         $this->isAdmin = $isAdmin;
     }
 
-    
+
     /**
      * @return mixed
      */
