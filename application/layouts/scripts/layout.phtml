@@ -9,12 +9,12 @@
                 <b>Site E-commerce</b>
             </div>
             <div >
-                <a href="<?php echo $this->url(array('controller'=>'product'), 'default', true) ?>">Produits</a>
-                <a href="<?php echo $this->url(array('controller'=>'cart'), 'default', true) ?>">Panier</a>
+                <a href="<?php echo $this->url(array('controller'=>'Product'), 'default', true) ?>">Produits</a>
+                <a href="<?php echo $this->url(array('controller'=>'Cart'), 'default', true) ?>">Panier</a>
             </div>
         </div>
-
-        <?php echo $this->layout()->content ?>
-
+        <div class="page-content">
+            <?php echo $this->layout()->content ?>
+        </div>
     </body>
 </html>
