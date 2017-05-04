@@ -9,6 +9,9 @@ class Application_Model_Product
     private $price;
     private $desc;
     private $quantity;
+    private $category;
+
+
 
     /**
      * Application_Model_Product constructor.
@@ -137,6 +140,23 @@ class Application_Model_Product
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
         return $this;
     }
 
