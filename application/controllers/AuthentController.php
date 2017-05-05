@@ -18,7 +18,6 @@ class AuthentController extends Zend_Controller_Action
 
             $adapter = new Zend_Auth_Adapter_DbTable(
                 $db,
-                'product',
                 'login',
                 'password',
                 'MD5(CONCAT(?, password_salt))'

@@ -9,5 +9,21 @@ $route = new Zend_Controller_Router_Route(
     )
 );
 
-
 $router->addRoute('product', $route);
+
+
+$route = new Zend_Controller_Router_Route(
+    'cart',
+    array(
+        'controller' => 'CartController',
+        'action' => 'index'
+    )
+);
+
+$router->addRoute('cart', $route);
+
+
+
+
+
+
