@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="19b04bc7-e089-494a-83fa-163cdb283f68" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/product/delete-product.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/product/delete-product.phtml" />
     </list>
     <ignored path="appEcom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,7 +61,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -72,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/product/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+            <state relative-caret-position="294">
+              <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -498,7 +497,7 @@
       <workItem from="1493795916487" duration="3662000" />
       <workItem from="1493800748323" duration="18321000" />
       <workItem from="1493882501673" duration="22338000" />
-      <workItem from="1493969057382" duration="20350000" />
+      <workItem from="1493969057382" duration="20995000" />
     </task>
     <task id="LOCAL-00001" summary="Changed User &#10;Added first sqlite script">
       <created>1493801941377</created>
@@ -556,11 +555,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493992764900</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="First page + Data =&gt; OK&#10;addProductAction =&gt; OK&#10;editProduct =&gt; KO&#10;deleteProduct =&gt; KO&#10;&#10;TODO -&gt; get id of product to enable update and deletion">
+      <created>1493995648611</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1493995648611</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67615000" />
+    <option name="totallyTimeSpent" value="68260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -929,18 +935,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/product/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="294">
+          <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/product/index.phtml">
+    <entry file="file://$PROJECT_DIR$/application/controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        <state relative-caret-position="187">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding />
         </state>
       </provider>
