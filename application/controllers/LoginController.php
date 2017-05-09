@@ -12,40 +12,47 @@ class LoginController extends Zend_Controller_Action
     public function loginAction()
     {
 
-       //$db = new Zend_Db_Adapter_Pdo_Sqlite(array('product-development' =>':memory:'));
-
         $db = new Zend_Db_Adapter_Pdo_Mysql(array(
 
-            'host'     => '127.0.0.1',
+            'host' => '127.0.0.1',
             'username' => 'root',
             'password' => '',
-            'dbname'   => 'baseecom'
+            'dbname' => 'baseecom'
 
         ));
 
-        $loginForm = new Application_Form_Login($_POST);
+        $request = $this->getRequest();
+        $loginForm    = new Application_Form_Login();
 
+        if ($this->getRequest()->isPost()) {
+            if ($loginForm->isValid($request->getPost())) {
 
-            $adapter = new Zend_Auth_Adapter_DbTable($db);
-            $adapter->setTableName('user')
+                $adapter = new Zend_Auth_Adapter_DbTable($db);
+                $adapter->setTableName('user')
                     ->setIdentityColumn('login')
                     ->setCredentialColumn('password');
 
-            $adapter->setIdentity('simon')
-                    ->setCredential('admin');
+                //TODO: Recuperer Identity et Credential de loginForm
+                $adapter->setIdentity($loginForm->getValue('login'))
+                        ->setCredential($loginForm->getValue('password'));
 
-            $result = $adapter->authenticate();
+                $auth   = Zend_Auth::getInstance();
+                $result = $auth->authenticate($adapter);
 
-            if ($result->isValid()) {
-                echo('Login réussi');
-                $this->redirect('index');
-                return;
-            }else{
-                echo("Informations non valides");
+                if ($result->isValid()) {
+                    echo('Login réussi');
+                    $this->redirect('/Product');
+                    return;
+                }else{
+                    echo("Fail");
+                }
+
+
             }
+        }
 
-
-        $this->view->loginForm = $loginForm;
+        $this->view->form = $loginForm;
     }
+
 
 }
