@@ -14,7 +14,7 @@ class LoginController extends Zend_Controller_Action
 
        //$db = new Zend_Db_Adapter_Pdo_Sqlite(array('product-development' =>':memory:'));
 
-       $db = new Zend_Db_Adapter_Pdo_Mysql(array(
+        $db = new Zend_Db_Adapter_Pdo_Mysql(array(
 
             'host'     => '127.0.0.1',
             'username' => 'root',
