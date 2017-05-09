@@ -28,9 +28,12 @@
         </layoutScriptsDirectory>
       </layoutsDirectory>
       <modelsDirectory>
-        <dbTableDirectory/>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Login"/>
+        </dbTableDirectory>
         <modelFile modelName="ProductMapper"/>
         <modelFile modelName="Product"/>
+        <modelFile modelName="LoginMapper"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>

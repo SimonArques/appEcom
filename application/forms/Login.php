@@ -6,7 +6,7 @@
  * Date: 04/05/2017
  * Time: 16:09
  */
-class Login extends Zend_Form
+class Application_Form_Login extends Zend_Form
 {
 
     public function init()
@@ -20,7 +20,8 @@ class Login extends Zend_Form
             'filters'    => array('StringTrim'),
         ));
 
-        $this->addElement('password', 'password', array(
+        $this->addElement(
+            'password', 'password', array(
             'label' => 'Password:',
             'required' => true,
         ));
