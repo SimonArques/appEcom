@@ -32,7 +32,6 @@ class LoginController extends Zend_Controller_Action
                     ->setIdentityColumn('login')
                     ->setCredentialColumn('password');
 
-                //TODO: Recuperer Identity et Credential de loginForm
                 $adapter->setIdentity($loginForm->getValue('login'))
                         ->setCredential($loginForm->getValue('password'));
 
@@ -40,18 +39,35 @@ class LoginController extends Zend_Controller_Action
                 $result = $auth->authenticate($adapter);
 
                 if ($result->isValid()) {
-                    echo('Login réussi');
+
                     $this->redirect('/Product');
                     return;
                 }else{
-                    echo("Fail");
+                    echo("Identifiant et/ou Mot de passe incorrects");
                 }
-
-
             }
         }
-
         $this->view->form = $loginForm;
+    }
+
+    public function logoutAction(){
+
+        $auth = Zend_Auth::getInstance();
+        if($auth->hasIdentity()){
+
+            echo("avant suppression: ".$auth->getIdentity()."\n");
+
+            $auth->clearIdentity();
+
+            echo("apres suppression: ".$auth->getIdentity());
+
+            $this->redirect('/Product');
+        }else{
+            echo("no one is logged");
+
+            $this->redirect('/Product');
+        }
+
     }
 
 

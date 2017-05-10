@@ -13,7 +13,13 @@
                 <a href="<?php echo $this->url(array('controller'=>'Product'), 'default', true) ?>">Produits</a>
                 <a href="<?php echo $this->url(array('controller'=>'Cart'), 'default', true) ?>">Panier</a>
                 <a href="<?php echo $this->url(array('controller'=>'Login'), 'default', true) ?>">Login</a>
-                <a href="<?php echo $this->url(array('controller'=>'Authent'), 'default', true) ?>">Logout</a>
+                <a href="<?php echo $this->url(array('controller'=>'Login', 'action'=>'logout'), 'default', true) ?>">Logout</a>
+                <?php
+                    $auth = Zend_Auth::getInstance();
+                    if($auth->hasIdentity()){
+                        echo("Logged in as ".$auth->getIdentity());
+                    }
+                ?>
             </div>
         </div>
         <div class="page-content">

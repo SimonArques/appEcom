@@ -1,6 +1,6 @@
 <?php
 
-
+//Route vers la page produits
 $route = new Zend_Controller_Router_Route(
     'product',
     array(
@@ -12,15 +12,16 @@ $route = new Zend_Controller_Router_Route(
 $router->addRoute('product', $route);
 
 
+//Route vers la page Login
 $route = new Zend_Controller_Router_Route(
-    'cart',
+    'Login',
     array(
-        'controller' => 'CartController',
-        'action' => 'index'
+        'controller' => 'Login',
+        'action' => 'login'
     )
 );
 
-$router->addRoute('cart', $route);
+$router->addRoute('login', $route);
 
 
 
