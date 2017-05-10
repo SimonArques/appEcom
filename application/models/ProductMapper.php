@@ -40,11 +40,11 @@ class Application_Model_ProductMapper
             unset($data['id']);
             $db = new Zend_Db_Table('PRODUCT');
             $db->insert($data);
-            //$this->getDbTable()->insert($data);
+
         } else {
             $db = new Zend_Db_Table('PRODUCT');
             $db->update($data, array('id = ?' => $id));
-            //$this->getDbTable()->update($data, array('id = ?' => $id));
+
         }
     }
 
@@ -52,7 +52,7 @@ class Application_Model_ProductMapper
 {
     $db = new Zend_Db_Table('PRODUCT');
     $result = $db->find($id);
-    //$result = $this->getDbTable()->find($id);
+
     if (0 == count($result)) {
         return;
     }
@@ -68,7 +68,7 @@ class Application_Model_ProductMapper
     {
         $db = new Zend_Db_Table('PRODUCT');
         $resultSet = $db->fetchAll();
-        //$resultSet = $this->getDbTable()->fetchAll();
+
         $entries   = array();
         foreach ($resultSet as $row) {
             $entry = new Application_Model_Product();

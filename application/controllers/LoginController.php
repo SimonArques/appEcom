@@ -55,15 +55,10 @@ class LoginController extends Zend_Controller_Action
         $auth = Zend_Auth::getInstance();
         if($auth->hasIdentity()){
 
-            echo("avant suppression: ".$auth->getIdentity()."\n");
-
             $auth->clearIdentity();
-
-            echo("apres suppression: ".$auth->getIdentity());
 
             $this->redirect('/Product');
         }else{
-            echo("no one is logged");
 
             $this->redirect('/Product');
         }

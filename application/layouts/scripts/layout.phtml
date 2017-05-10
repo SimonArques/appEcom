@@ -14,6 +14,7 @@
                 <a href="<?php echo $this->url(array('controller'=>'Cart'), 'default', true) ?>">Panier</a>
                 <a href="<?php echo $this->url(array('controller'=>'Login'), 'default', true) ?>">Login</a>
                 <a href="<?php echo $this->url(array('controller'=>'Login', 'action'=>'logout'), 'default', true) ?>">Logout</a>
+                <a href="<?php echo $this->url(array('controller'=>'Product', 'action'=>'addProduct'), 'default', true) ?>">Add product</a>
                 <?php
                     $auth = Zend_Auth::getInstance();
                     if($auth->hasIdentity()){
