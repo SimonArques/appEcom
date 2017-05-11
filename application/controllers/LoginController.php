@@ -22,7 +22,7 @@ class LoginController extends Zend_Controller_Action
         ));
 
         $request = $this->getRequest();
-        $loginForm    = new Application_Form_Login();
+        $loginForm  = new Application_Form_Login();
 
         if ($this->getRequest()->isPost()) {
             if ($loginForm->isValid($request->getPost())) {
@@ -64,6 +64,4 @@ class LoginController extends Zend_Controller_Action
         }
 
     }
-
-
 }

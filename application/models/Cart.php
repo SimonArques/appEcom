@@ -11,6 +11,7 @@ class Application_Model_Cart
     private $id;
     private $nbProducts;
     private $totalPrice;
+    private $products;
 
     /**
      * Application_Model_Cart constructor.
@@ -71,6 +72,22 @@ class Application_Model_Cart
     public function setTotalPrice($totalPrice)
     {
         $this->totalPrice = $totalPrice;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * @param mixed $products
+     */
+    public function setProducts($products)
+    {
+        $this->products = $products;
     }
     
 

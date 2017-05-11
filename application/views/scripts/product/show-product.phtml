@@ -1,6 +1,5 @@
 <h1>Produit </h1>
 
-
     <?php $id = $this->id; ?>
     <div class="col-md-2 column productbox">
         <img src="http://placehold.it/300x200/e67e22/ffffff&text=HTML5" class="img-responsive">
@@ -23,8 +22,10 @@
             echo'<a href="/appEcom/public/Product/deleteProduct/id/'.$id.'">Supprimer le produit</a>';
             ?>
         </div>
-        <div class="productshow">
-            <?php echo'<a href="/appEcom/public/Product/showProduct/id/'.$id.'">Afficher le produit</a>'; ?>
+        <div class="productedit">
+            <?php
+            echo'<a href="/appEcom/public/Product/editProduct/id/'.$id.'">Editer le produit</a>';
+            ?>
         </div>
     </div>
 
