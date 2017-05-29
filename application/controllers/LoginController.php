@@ -39,6 +39,15 @@ class LoginController extends Zend_Controller_Action
                 $result = $auth->authenticate($adapter);
 
                 if ($result->isValid()) {
+                    $connected = new Zend_Session_Namespace('connexion_status');
+                    $connected = true;
+
+                    // get connected user's role
+                    $user = new Application_Model_User($loginForm->getValues());
+                    $userMapper = new Application_Model_UserMapper();
+                    $currentUser = $userMapper->findbylogin($loginForm->getValue('login'), $user);
+                    $is_admin = new Zend_Session_Namespace('is_admin');
+                    $is_admin = $currentUser->getIsAdmin();
 
                     $this->redirect('/Product');
                     return;
@@ -54,12 +63,10 @@ class LoginController extends Zend_Controller_Action
 
         $auth = Zend_Auth::getInstance();
         if($auth->hasIdentity()){
-
+            Zend_Session::namespaceUnset('mycart');
             $auth->clearIdentity();
-
             $this->redirect('/Product');
         }else{
-
             $this->redirect('/Product');
         }
 

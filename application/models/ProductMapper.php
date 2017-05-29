@@ -33,36 +33,35 @@ class Application_Model_ProductMapper
             'desc' => $product->getDesc(),
             'quantity' => $product->getQuantity(),
             'category' => $product->getCategory()
-
         );
 
-        if (null === ($id = $product->getId())) {
-            unset($data['id']);
+        // if id exists, then it already is stocked in db so we nee
+        if (null == ($id = $product->getId())) {
             $db = new Zend_Db_Table('PRODUCT');
             $db->insert($data);
-
         } else {
             $db = new Zend_Db_Table('PRODUCT');
             $db->update($data, array('id = ?' => $id));
-
         }
     }
 
     public function find($id, Application_Model_Product $product)
-{
-    $db = new Zend_Db_Table('PRODUCT');
-    $result = $db->find($id);
+    {
+        $db = new Zend_Db_Table('PRODUCT');
+        $result = $db->find($id);
 
-    if (0 == count($result)) {
-        return;
+        if (0 == count($result)) {
+            return;
+        }
+        $row = $result->current();
+        $product->setId($row->id)
+            ->setProductName($row->productName)
+            ->setPrice($row->price)
+            ->setDesc($row->desc)
+            ->setCategory($row->category);
+
+        return $product;
     }
-    $row = $result->current();
-    $product->setId($row->id)
-        ->setProductName($row->productName)
-        ->setPrice($row->price)
-        ->setDesc($row->desc)
-        ->setCategory($row->category);
-}
 
     public function fetchAll()
     {
@@ -77,7 +76,7 @@ class Application_Model_ProductMapper
                 ->setPrice($row->price)
                 ->setDesc($row->desc)
                 ->setQuantity($row->quantity)
-                ->setCategory($row->category);;
+                ->setCategory($row->category);
 
             $entries[] = $entry;
         }

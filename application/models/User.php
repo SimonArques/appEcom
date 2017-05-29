@@ -23,13 +23,41 @@ class Application_Model_User
      * @param $password
      * @param $isAdmin
      */
-    public function __construct($id, $name, $login, $password, $isAdmin)
+    public function __construct(array $options = null)
     {
-        $this->id = $id;
-        $this->name = $name;
-        $this->login = $login;
-        $this->password = $password;
-        $this->isAdmin = $isAdmin;
+        if (is_array($options)) {
+            $this->setOptions($options);
+        }
+    }
+
+    public function __set($name, $value)
+    {
+        $method = 'set' . $name;
+        if (('mapper' == $name) || !method_exists($this, $method)) {
+            throw new Exception('Invalid Product property');
+        }
+        $this->$method($value);
+    }
+
+    public function __get($name)
+    {
+        $method = 'get' . $name;
+        if (('mapper' == $name) || !method_exists($this, $method)) {
+            throw new Exception('Invalid Product property');
+        }
+        return $this->$method();
+    }
+
+    public function setOptions(array $options)
+    {
+        $methods = get_class_methods($this);
+        foreach ($options as $key => $value) {
+            $method = 'set' . ucfirst($key);
+            if (in_array($method, $methods)) {
+                $this->$method($value);
+            }
+        }
+        return $this;
     }
 
 
@@ -47,6 +75,7 @@ class Application_Model_User
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
     }
 
     /**
@@ -63,6 +92,7 @@ class Application_Model_User
     public function setName($name)
     {
         $this->name = $name;
+        return $this;
     }
 
     /**
@@ -79,6 +109,7 @@ class Application_Model_User
     public function setLogin($login)
     {
         $this->login = $login;
+        return $this;
     }
 
     /**
@@ -95,6 +126,7 @@ class Application_Model_User
     public function setPassword($password)
     {
         $this->password = $password;
+        return $this;
     }
 
     /**
@@ -111,6 +143,7 @@ class Application_Model_User
     public function setIsAdmin($isAdmin)
     {
         $this->isAdmin = $isAdmin;
+        return $this;
     }
 
 

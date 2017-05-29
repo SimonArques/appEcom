@@ -2,27 +2,41 @@
 <html>
     <head>
         <title>Site E-Commerce</title>
-        <?php echo $this->headLink()->appendStylesheet('styles/styles.css') ?>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div>
-            <div >
-                <b>Site E-commerce</b>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/appEcom/public/Product">Site E-Commerce</a>
             </div>
-            <div >
-                <a href="<?php echo $this->url(array('controller'=>'Product'), 'default', true) ?>">Produits</a>
-                <a href="<?php echo $this->url(array('controller'=>'Cart'), 'default', true) ?>">Panier</a>
-                <a href="<?php echo $this->url(array('controller'=>'Login'), 'default', true) ?>">Login</a>
-                <a href="<?php echo $this->url(array('controller'=>'Login', 'action'=>'logout'), 'default', true) ?>">Logout</a>
-                <a href="<?php echo $this->url(array('controller'=>'Product', 'action'=>'addProduct'), 'default', true) ?>">Add product</a>
-                <?php
-                    $auth = Zend_Auth::getInstance();
-                    if($auth->hasIdentity()){
-                        echo("Logged in as ".$auth->getIdentity());
-                    }
-                ?>
-            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="<?php echo $this->url(array('controller'=>'Product'), 'default', true) ?>">Produits</a></li>
+                <li><a href="<?php echo $this->url(array('controller'=>'Cart'), 'default', true) ?>">Panier</a></li>
+                <li> <a href="<?php echo $this->url(array('controller'=>'Product', 'action'=>'addProduct'), 'default', true) ?>">Add product</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="<?php echo $this->url(array('controller'=>'Login', 'action'=>'logout'), 'default', true) ?>">Logout</a></li>
+                <li><a href="<?php echo $this->url(array('controller'=>'Login'), 'default', true) ?>">Login</a></li>
+                <li>
+                    <?php
+                        $auth = Zend_Auth::getInstance();
+                        if($auth->hasIdentity()){
+                            echo("Logged in as ".$auth->getIdentity());
+                        }else if(!$auth->hasIdentity()){
+
+                            echo("pas d'identité");
+                        }
+                    ?>
+                </li>
+            </ul>
         </div>
+    </nav>
         <div class="page-content">
             <?php echo $this->layout()->content ?>
         </div>

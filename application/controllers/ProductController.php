@@ -6,6 +6,8 @@ class ProductController extends Zend_Controller_Action
     public function init()
     {
         /* Initialize action controller here */
+        $connexion_status = Zend_Session::namespaceGet('connexion_status');
+        $is_admin = Zend_Session::namespaceGet('$is_admin');
     }
 
     public function indexAction()

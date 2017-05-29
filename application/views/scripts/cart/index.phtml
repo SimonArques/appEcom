@@ -1,9 +1,34 @@
 <h1>Mon Panier</h1>
 
+<table class="table">
+    <thead>
+        <tr>
+            <th>Produit</th>
+            <th>prix</th>
+            <th>quantité</th>
+            <th>total</th>
+        </tr>
+    </thead>
+    <tbody>
 <?php
+if(!empty($this->cart)) {
 
+    foreach ($this->cart as $cart) {
 
-print_r($cart) ?>
+        foreach ($cart as $product) {
+            echo("<tr>");
+            for($i=0;$i < count($product);$i++) {
+                echo("<td>".$product[$i]."</td>");
+            }
+            echo("<td><a href'supprimer'> Supprimer</a></td></tr>");
+        }
+       // var_dump($product);
+    }
+}
+?>
+    </tbody>
+</table>
 
-
-
+<div class="pull-left">
+    <?php echo'<a href="/appEcom/public/Cart/emptycart">Vider le panier</a>'; ?>
+</div>
