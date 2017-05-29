@@ -19,11 +19,9 @@ class Application_Model_Cart
      * @param $nbProducts
      * @param $totalPrice
      */
-    public function __construct($id, $nbProducts, $totalPrice)
+    public function __construct()
     {
-        $this->id = $id;
-        $this->nbProducts = $nbProducts;
-        $this->totalPrice = $totalPrice;
+
     }
 
     /**
