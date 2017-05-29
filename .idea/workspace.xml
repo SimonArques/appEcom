@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19b04bc7-e089-494a-83fa-163cdb283f68" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/appEcom.iml" afterPath="$PROJECT_DIR$/.idea/appEcom.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="appEcom.iws" />
@@ -431,7 +428,7 @@
       <workItem from="1495006993400" duration="61000" />
       <workItem from="1495617458527" duration="2273000" />
       <workItem from="1496075249861" duration="1352000" />
-      <workItem from="1496077854286" duration="330000" />
+      <workItem from="1496077854286" duration="374000" />
     </task>
     <task id="LOCAL-00001" summary="Changed User &#10;Added first sqlite script">
       <created>1493801941377</created>
@@ -552,11 +549,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496075696163</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fichiers de configs .idea">
+      <created>1496078223403</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1496078223403</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137591000" />
+    <option name="totallyTimeSpent" value="137635000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,7 +623,8 @@
     <MESSAGE value="Login-&gt; ok avec form -&gt; verifier la présence d'une session avec user&#10;&#10;Todo -&gt;&#10; Recreer db en mysql&#10;Prendre en compte isAdmin&#10;edition, suppression Produits &#10;Panier &#10;" />
     <MESSAGE value="Login-&gt; ok &#10;&#10;Todo -&gt;&#10; Recreer db en mysql&#10;Prendre en compte isAdmin&#10;edition, suppression Produits &#10;Panier &#10;" />
     <MESSAGE value="&#10;&#10;Todo -&gt;&#10;Prendre en compte isAdmin&#10;edition  Produits &#10;Panier &#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;Todo -&gt;&#10;Prendre en compte isAdmin&#10;edition  Produits &#10;Panier &#10;" />
+    <MESSAGE value="fichiers de configs .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="fichiers de configs .idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
