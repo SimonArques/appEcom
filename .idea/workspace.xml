@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19b04bc7-e089-494a-83fa-163cdb283f68" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/product/add-product.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/product/edit-product.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/product/index.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="appEcom.iws" />
@@ -92,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/product/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -127,7 +125,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/CartController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -412,6 +410,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appEcom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appEcom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -497,7 +513,7 @@
       <workItem from="1494492881531" duration="17331000" />
       <workItem from="1495006993400" duration="61000" />
       <workItem from="1495617458527" duration="2273000" />
-      <workItem from="1496075249861" duration="1352000" />
+      <workItem from="1496075249861" duration="2456000" />
     </task>
     <task id="LOCAL-00001" summary="Changed User &#10;Added first sqlite script">
       <created>1493801941377</created>
@@ -618,11 +634,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496075696163</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="&#10;&#10;Todo -&gt;&#10;Prendre en compte isAdmin&#10;edition  Produits &#10;Panier &#10;">
+      <created>1496076918722</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1496076918722</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137261000" />
+    <option name="totallyTimeSpent" value="138365000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1047,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/product/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/CartController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1062,6 +1077,14 @@
           <folding>
             <marker date="1494514904985" expanded="true" signature="629:672" placeholder="SELECT produ... product" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/product/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
